@@ -1,11 +1,13 @@
 {
   "extends": [
     "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
     "next/core-web-vitals",
     "prettier"
   ],
-  "plugins": ["jest"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "jest"],
   "rules": {
     "arrow-body-style": "off",
     "import/extensions": [
