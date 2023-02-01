@@ -1,7 +1,7 @@
 # FE Template app
 
 This Repo is an example template to be used to create new nextjs projects for Urbint.
-The template was created using nextjs framework and the tools we are using in our projects for tests, lints and so on.
+The template was created using the nextjs framework and the tools we are using in our projects for tests, lints, and so on.
 
 To start a new project using this template you should run:
 
@@ -11,13 +11,33 @@ yarn create next-app <project-name> -e https://github.com/urbint/fe-app-project
 
 This command will create a folder with the <project-name> and the necessary files and configurations.
 
-> Your project name should not have space and should be all lower-case.
+> Your project name should not have space and should be all lowercase.
 
-# NextJS commands
+## Folder structure
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project is structured with tools configurations (package.json, eslintrc, prettierrc, etc) on the root level besides two folders: public and src.
 
-## Getting Started
+- The `public` folder holds public files and assets
+
+- The `src` folder holds the source code of your project
+
+## The `src` folder structure
+
+Components folder = Here you have all your components with the colocated architecture.
+
+> The colocated architecture means that everything related to your component should stay in your component folder: tests, styles, GraphQL fragments, etc.
+
+> Do not put your components in the page folder because all JS or TS files inside this folder will be interpreted as pages for nextjs and it will decrease the build time of your project. NextJS does tree shaking so don't worry about that.
+
+Pages folder = Here resides the pages of your application using the routeing strategy from nextjs, more info about pages [here](https://nextjs.org/docs/basic-features/pages) and routing [here](https://nextjs.org/docs/routing/introduction)
+
+## Documentation
+
+Since it's a NextJS project you should always check the nextjs documentation if you want any information related to integration with tools, environments, and most importantly best practices. Below you have info on how to start your project.
+
+## NextJS commands
+
+### Getting Started
 
 First, run the development server:
 
