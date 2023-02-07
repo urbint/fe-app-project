@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import { WelcomeMessage } from "@/components";
+import { DocumentationLink } from "@/components/DocumentationLink";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <WelcomeMessage />
+        <DocumentationLink />
       </main>
     </>
   );
